@@ -1,14 +1,14 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+--local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 -- Modes
 --   normal_mode = "n",
@@ -47,6 +47,9 @@ keymap("i", "jk", "<ESC>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+-- yank to clipboard
+keymap("v", "Y", "\"+y", opts)
+
 
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)

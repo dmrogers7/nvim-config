@@ -58,10 +58,15 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
-  use("sunjon/shade.nvim")
+	use("sunjon/shade.nvim")
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+    cmd = "TroubleToggle",
+	})
 
 	-- Colorschemes
-	use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 	use("morhetz/gruvbox")
 
@@ -72,6 +77,10 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
+	use({
+    "neoclide/coc.nvim",
+    branch = "release"
+  })
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -82,7 +91,6 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use("eclipse/eclipse.jdt.ls") -- java
 	use("mfussenegger/nvim-jdtls")
 
 	-- Telescope

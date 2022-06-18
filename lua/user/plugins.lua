@@ -62,7 +62,7 @@ return packer.startup(function(use)
 	use({
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
-    cmd = "TroubleToggle",
+		cmd = "TroubleToggle",
 	})
 
 	-- Colorschemes
@@ -78,9 +78,9 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
 	use({
-    "neoclide/coc.nvim",
-    branch = "release"
-  })
+		"neoclide/coc.nvim",
+		branch = "release",
+	})
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -91,7 +91,7 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use("mfussenegger/nvim-jdtls")
+	use("mfussenegger/nvim-jdtls") -- java
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")

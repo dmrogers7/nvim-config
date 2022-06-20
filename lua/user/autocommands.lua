@@ -33,7 +33,7 @@ vim.cmd([[
   augroup _format
     autocmd!
     autocmd BufWritePre * :%s/\s\+$//e
-    autocmd BufWritePre * lua vim.lsp.buf.formatting()
+    autocmd BufWritePre * lua vim.lsp.buf.format()
   augroup end
 
   augroup _gopls

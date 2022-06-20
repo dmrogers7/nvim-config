@@ -9,13 +9,28 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
+	cmd = { "nvim" },
+	debounce = 250,
 	debug = false,
+	default_timeout = 5000,
+	diagnostics_format = "#{m}",
+	fallback_severity = vim.diagnostic.severity.ERROR,
+	log = {
+		enable = true,
+		level = "warn",
+		use_console = "async",
+	},
+	on_attach = nil,
+	on_init = nil,
+	on_exit = nil,
+	-- root_dir = u.root_pattern(".null-ls-root", "Makefile", ".git"),
+	update_in_insert = true,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-		formatting.black.with({ extra_args = { "--fast" } }),
+		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-    formatting.gofmt,
-    -- diagnostics.flake8
-    diagnostics.golangci_lint.with({ extra_args = { "--enable wsl", "--enable misspell", "--out-format=colored-line-number", "--issues-exit-code=1"} })
+		formatting.gofmt,
+		-- diagnostics.flake8
+		diagnostics.golangci_lint,
 	},
 })

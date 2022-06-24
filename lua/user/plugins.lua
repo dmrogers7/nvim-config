@@ -64,6 +64,7 @@ return packer.startup(function(use)
 		requires = "kyazdani42/nvim-web-devicons",
 		cmd = "TroubleToggle",
 	})
+	use("iamcco/markdown-preview.nvim")
 
 	-- Colorschemes
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
@@ -96,6 +97,7 @@ return packer.startup(function(use)
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("mfussenegger/nvim-jdtls") -- java
+    use("")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")

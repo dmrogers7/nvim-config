@@ -8,6 +8,13 @@ vim.cmd([[
     autocmd FocusLost * silent! wa
   augroup end
 
+  " augroup _colorscheme
+  "   autocmd BufEnter *      colorscheme nightfox
+  "   autocmd BufEnter *.html colorscheme tomorrow
+  "   autocmd BufEnter *.xml  colorscheme tomorrow
+  "   autocmd BufEnter *.xsl  colorscheme tomorrow
+  " augroup end
+  "
   augroup _git
     autocmd!
     autocmd FileType gitcommit setlocal wrap
@@ -43,7 +50,9 @@ vim.cmd([[
 
   augroup _files
     autocmd!
-    autocmd BufNewFile,BufRead Spinnakerfile set syntax=json
-    autocmd BufNewFile,BufRead *.cql set syntax=sql
+    autocmd BufNewFile,BufRead *Jenkinsfile* set filetype=groovy
+    autocmd BufNewFile,BufRead Spinnakerfile set filetype=json
+    autocmd BufNewFile,BufRead *.cql set filetype=sql
+    autocmd BufNewFile,BufRead *.tftpl set filetype=go
   augroup end
 ]])

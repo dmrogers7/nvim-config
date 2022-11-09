@@ -70,10 +70,10 @@ return packer.startup(function(use)
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 	use("morhetz/gruvbox")
-	use({
-		"EdenEast/nightfox.nvim",
-		tag = "v1.0.0",
-	})
+	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" })
+	use("marko-cerovac/material.nvim")
+	use("sainnhe/gruvbox-material")
+	use("rebelot/kanagawa.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -95,9 +95,8 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
-	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+	use({ "jose-elias-alvarez/null-ls.nvim", tag = "76d0573fc159839a9c4e62a0ac4f1046845cdd50" }) -- for formatters and linters
 	use("mfussenegger/nvim-jdtls") -- java
-    use("")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")

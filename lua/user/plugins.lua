@@ -48,7 +48,8 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+	-- use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
 	use("akinsho/toggleterm.nvim")
@@ -59,6 +60,7 @@ return packer.startup(function(use)
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
 	use("sunjon/shade.nvim")
+	use("earthly/earthly.vim")
 	use({
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
@@ -95,7 +97,8 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
-	use({ "jose-elias-alvarez/null-ls.nvim", tag = "76d0573fc159839a9c4e62a0ac4f1046845cdd50" }) -- for formatters and linters
+	-- use({ "jose-elias-alvarez/null-ls.nvim", tag = "76d0573fc159839a9c4e62a0ac4f1046845cdd50" }) -- for formatters and linters
+	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("mfussenegger/nvim-jdtls") -- java
 
 	-- Telescope

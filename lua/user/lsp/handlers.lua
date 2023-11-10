@@ -84,7 +84,7 @@ M.on_attach = function(client, bufnr)
 	if
 		client.name == "tsserver"
 		or client.name == "gopls"
-		or client.name == "sumneko_lua"
+		or client.name == "lua_ls"
 		or client.name == "jsonls"
 	then
 		client.server_capabilities.document_formatting = false

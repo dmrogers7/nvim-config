@@ -48,7 +48,12 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+	use({
+		"akinsho/bufferline.nvim",
+		tag = "*",
+		commit = "73540cb95f8d95aa1af3ed57713c6720c78af915",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
 	-- use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
@@ -76,6 +81,7 @@ return packer.startup(function(use)
 	use("marko-cerovac/material.nvim")
 	use("sainnhe/gruvbox-material")
 	use("rebelot/kanagawa.nvim")
+	use("w0ng/vim-hybrid")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -84,6 +90,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
+	use("echasnovski/mini.icons")
 	use({
 		"neoclide/coc.nvim",
 		branch = "release",

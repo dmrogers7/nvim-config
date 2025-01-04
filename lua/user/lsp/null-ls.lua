@@ -30,7 +30,11 @@ null_ls.setup({
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		formatting.gofmt,
-		formatting.xmllint,
+		formatting.xmllint.with({
+			env = {
+				XMLLINT_INDENT = "    ",
+			},
+		}),
 		-- diagnostics.flake8
 		diagnostics.golangci_lint,
 	},

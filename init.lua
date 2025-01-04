@@ -21,3 +21,6 @@ require("user.whichkey")
 require("user.autocommands")
 require("user.shade")
 require("user.markdown-preview")
+
+vim.wo.number = true
+vim.wo.relativenumber = true
